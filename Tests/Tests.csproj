@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -40,6 +40,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Entitas\Entitas\CodeGenerator\Generators\PoolEntityGenerator.cs">
+      <Link>Linked Libraries\Entitas\CodeGenerator\Generators\PoolEntityGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Entitas\Entitas\CodeGenerator\Interfaces\IPoolEntityCodeGenerator.cs">
+      <Link>Linked Libraries\Entitas\CodeGenerator\Interfaces\IPoolEntityCodeGenerator.cs</Link>
+    </Compile>
     <Compile Include="Tests\Entitas\describe_Entity.cs" />
     <Compile Include="Tests\Entitas\describe_Group.cs" />
     <Compile Include="Tests\Entitas\describe_GroupObserver.cs" />
@@ -310,27 +316,7 @@
     <Compile Include="Tests\Entitas\CodeGenerator\Fixtures\Classes\SomeStruct.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Tests\" />
-    <Folder Include="Libraries\" />
-    <Folder Include="Libraries\NSpec\" />
-    <Folder Include="Tests\Entitas\" />
-    <Folder Include="Tests\Entitas.Unity\" />
-    <Folder Include="Tests\Entitas\Fixtures\" />
-    <Folder Include="Tests\Entitas.Migration\" />
-    <Folder Include="Linked Libraries\" />
-    <Folder Include="Tests\Entitas\CodeGenerator\" />
-    <Folder Include="Tests\Entitas.Unity\CodeGenerator\" />
-    <Folder Include="Tests\Entitas.Unity\VisualDebugging\" />
-    <Folder Include="Tests\Entitas\Fixtures\Systems\" />
-    <Folder Include="Tests\Entitas\Fixtures\Components\" />
-    <Folder Include="Tests\Entitas\CodeGenerator\Fixtures\Components\" />
-    <Folder Include="Tests\Entitas.Unity\VisualDebugging\Fixtures\" />
-    <Folder Include="Tests\Entitas\Serialization\" />
-    <Folder Include="Tests\Entitas\Blueprints\" />
-    <Folder Include="Tests\Entitas.Unity\Blueprints\" />
-    <Folder Include="Tests\Entitas\CodeGenerator\Fixtures\Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Libraries\nunit.framework.dll" />
     <None Include="Libraries\NSpec\NSpec.dll" />
